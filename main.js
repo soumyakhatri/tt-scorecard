@@ -1,88 +1,88 @@
-// let point1 = 0;
-// let point2 =0;
-//
-// document.querySelectorAll('.score')[0].addEventListener("click", increase1);
-//
-// function increase1(){
-//     point1++;
-//     document.querySelector('.point1').innerHTML = point1;
-//     checkWinner();
-// }
-//
-// document.querySelectorAll('.score')[1].addEventListener("click", increase2);
-//
-// function increase2(){
-//     point2++;
-//     document.querySelector('.point2').innerHTML = point2;
-//     checkWinner();
-// }
-//
-//
-// function checkWinner(){
-//
-//     let result = document.querySelector(".result h2");
-//
-//     if(point1>=11 && point2<10){
-//         document.querySelector(".lead h2").innerHTML = "";
-//         result.innerHTML = "Player 1 Wins";
-//         document.querySelector(".result h2").classList.add("animate");
-//         stop();
-//     } else if (point2>=11 && point1<10){
-//         document.querySelector(".lead h2").innerHTML = "";
-//         result.innerHTML = "Player 2 Wins";
-//         stop();
-//         document.querySelector(".result h2").classList.add("animate");
-//     } else if(point1>=10 && point2>=10){
-//
-//         if(point1- point2 === 2){
-//
-//             document.querySelector(".lead h2").innerHTML = "";
-//             result.innerHTML = "Player 1 Wins";
-//             stop();
-//             document.querySelector(".result h2").classList.add("animate");
-//         } else if(point2 - point1 === 2){
-//             document.querySelector(".lead h2").innerHTML = "";
-//             result.innerHTML = "Player 2 Wins";
-//             stop();
-//             document.querySelector(".result h2").classList.add("animate");
-//         }
-//     } else if (point1 > point2){
-//             leadplayer();
-//         } else if( point1 < point2){
-//             leadplayer();
-//         } else {
-//             leadplayer();
-//         }
-// }
-//
-// document.querySelector('.new-game').onclick = function(){
-//     document.querySelector('.point1').innerHTML = '0';
-//     document.querySelector('.point2').innerHTML = '0';
-//     point1 = 0;
-//     point2 = 0;
-//     document.querySelector(".result h2").innerHTML = "";
-//     document.querySelectorAll('.score')[0].addEventListener("click", increase1);
-//     document.querySelectorAll('.score')[1].addEventListener("click", increase2);
-//     document.querySelector(".result h2").classList.remove("animate");
-//
-// }
-//
-// function stop(){
-//     document.querySelectorAll('.score')[0].removeEventListener("click", increase1);
-//     document.querySelectorAll('.score')[1].removeEventListener("click", increase2);
-// }
-//
-//
-// function leadplayer(){
-// let lead;
-// if(point1 > point2){
-//     lead = point1 - point2;
-//     document.querySelector(".lead h2").innerHTML = "Player 1 is leading by " + lead + " points"
-// } else if (point1 < point2){
-//     lead = point2 - point1;
-//     document.querySelector(".lead h2").innerHTML = "Player 2 is leading by " + lead + " points"
-//
-// } else {
-//     document.querySelector(".lead h2").innerHTML = "Score Levels";
-// }
-// }
+let point1 = 0;
+let point2 =0;
+
+document.querySelectorAll('.score')[0].addEventListener("click", increase1);
+
+function increase1(){
+    point1++;
+    document.querySelector('.point1').innerHTML = point1;
+    checkWinner();
+}
+
+document.querySelectorAll('.score')[1].addEventListener("click", increase2);
+
+function increase2(){
+    point2++;
+    document.querySelector('.point2').innerHTML = point2;
+    checkWinner();
+}
+
+
+function checkWinner(){
+
+    let result = document.querySelector(".result h2");
+
+    if(point1>=11 && point2<10){
+        document.querySelector(".lead h2").innerHTML = "";
+        result.innerHTML = "Player 1 Wins";
+        document.querySelector(".result h2").classList.add("animate");
+        stop();
+    } else if (point2>=11 && point1<10){
+        document.querySelector(".lead h2").innerHTML = "";
+        result.innerHTML = "Player 2 Wins";
+        stop();
+        document.querySelector(".result h2").classList.add("animate");
+    } else if(point1>=10 && point2>=10){
+
+        if(point1- point2 === 2){
+
+            document.querySelector(".lead h2").innerHTML = "";
+            result.innerHTML = "Player 1 Wins";
+            stop();
+            document.querySelector(".result h2").classList.add("animate");
+        } else if(point2 - point1 === 2){
+            document.querySelector(".lead h2").innerHTML = "";
+            result.innerHTML = "Player 2 Wins";
+            stop();
+            document.querySelector(".result h2").classList.add("animate");
+        }
+    } else if (point1 > point2){
+            leadplayer();
+        } else if( point1 < point2){
+            leadplayer();
+        } else {
+            leadplayer();
+        }
+}
+
+document.querySelector('.new-game').onclick = function(){
+    document.querySelector('.point1').innerHTML = '0';
+    document.querySelector('.point2').innerHTML = '0';
+    point1 = 0;
+    point2 = 0;
+    document.querySelector(".result h2").innerHTML = "";
+    document.querySelectorAll('.score')[0].addEventListener("click", increase1);
+    document.querySelectorAll('.score')[1].addEventListener("click", increase2);
+    document.querySelector(".result h2").classList.remove("animate");
+
+}
+
+function stop(){
+    document.querySelectorAll('.score')[0].removeEventListener("click", increase1);
+    document.querySelectorAll('.score')[1].removeEventListener("click", increase2);
+}
+
+
+function leadplayer(){
+let lead;
+if(point1 > point2){
+    lead = point1 - point2;
+    document.querySelector(".lead h2").innerHTML = "Player 1 is leading by " + lead + " points"
+} else if (point1 < point2){
+    lead = point2 - point1;
+    document.querySelector(".lead h2").innerHTML = "Player 2 is leading by " + lead + " points"
+
+} else {
+    document.querySelector(".lead h2").innerHTML = "Score Levels";
+}
+}
