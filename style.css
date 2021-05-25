@@ -1,14 +1,76 @@
 body{
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("ben-sauer-R1m90FLHJFY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+button{
+  border-radius: 20px;
+  border-width: thick;
+  padding: 10px 20px;
+}
+
+button:focus{
+  outline: none;
+}
+
+button:active{
+  border-radius: 20px;
 }
 
 .players{
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 h2{
   font-size: 50px;
+  color: #fff;
+}
+
+.new-game{
+  position: relative;
+  margin-top: 50px;
+}
+
+.new-game button{
+  font-size: 50px;
+  margin-bottom: 100px;
+  background-color: yellow;
+}
+
+.score1, .score2{
+  margin-right: 30px;
+}
+
+select{
+  color: blue;
+  border-color: blue;
+  border-width: thick;
+  border-radius: 20px;
+}
+
+select:focus{
+  outline: none;
+}
+i{
+  color: red;
+}
+
+.result-h{
+  font-size: 80px;
+
+}
+
+.animate{
+  transition-property: all;
+  transition-duration: 2s;
+  transform: rotate(360deg) scale(2.5);
 }
