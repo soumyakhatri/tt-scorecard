@@ -49,8 +49,6 @@ function checkWinner(){
             result.innerHTML = "Player 2 Wins";
             stop();
             document.querySelector(".result h2").classList.add("animate");
-        } else {
-          leadplayer();
         }
     } else if (point1 > point2){
             leadplayer();
@@ -67,11 +65,10 @@ document.querySelector('.new-game').onclick = function(){
     point1 = 0;
     point2 = 0;
     document.querySelector(".result-h").innerHTML = " ";
-    document.querySelector(".lead h2").innerHTML = " ";
+    document.querySelector(".lead h2").innerHTML = "Soumya's TT ScoreBoard <br> Let's Start the match";
     document.querySelectorAll('.touch')[0].addEventListener("click", increase1);
     document.querySelectorAll('.touch')[1].addEventListener("click", increase2);
     document.querySelector(".result h2").classList.remove("animate");
-
 
 }
 
@@ -90,7 +87,7 @@ if(point1 > point2){
     lead = point2 - point1;
     document.querySelector(".lead h2").innerHTML = "Player 2 is leading by " + lead + " points"
 
-} else if (point1 === point2){
+} else {
     document.querySelector(".lead h2").innerHTML = "Score Levels";
 }
 }
@@ -100,19 +97,25 @@ if(point1 > point2){
 function service(){
 
 
-    console.log(point1 + point2);
-    if((point1 + point2) % 2 ===0){
+  if(point1 <10 || point2 <10){
+    if((point1 + point2) % 2 ===0 ){
 
         if(bat1.style.display === 'block'){
             bat1.style.display = 'none';
             bat2.style.display = 'block';
-            console.log(bat1.style.display);
-            console.log(bat2.style.display);
         } else if(bat1.style.display === 'none'){
             bat2.style.display = 'none';
             bat1.style.display = 'block';
-            console.log('bat1');
         }
     }
+  } else if (point1 >= 10 && point2 >= 10){
+      if(bat1.style.display === 'block'){
+          bat1.style.display = 'none';
+          bat2.style.display = 'block';
+      } else if(bat2.style.display === 'block'){
+          bat2.style.display = 'none';
+          bat1.style.display = 'block';
+      }
+  }
 
 }
