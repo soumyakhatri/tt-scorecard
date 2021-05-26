@@ -1,3 +1,8 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
 body{
   height: 100vh;
   display: flex;
@@ -63,16 +68,17 @@ select:focus{
 }
 .bat2 i{
   color: red;
+  opacity: 1
 }
 
 .bat1 i{
   color: blue;
+  opacity: 1;
 }
 
 .bat1, .bat2 {
   border-style: none;
   background-color: none;
-  opacity: 1;
 }
 
 .result-h{
@@ -203,6 +209,7 @@ select:focus{
     display: inline-block;
     border-radius: 0;
     width: 100%;
+    border-style:none;
   }
 
   h2{
