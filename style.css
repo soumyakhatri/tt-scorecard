@@ -4,7 +4,7 @@ body{
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  background-image: url("ben-sauer-R1m90FLHJFY-unsplash.jpg");
+  background-image: url("table-tennis-4291378_1920.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -61,8 +61,18 @@ select{
 select:focus{
   outline: none;
 }
-i{
+.bat2 i{
   color: red;
+}
+
+.bat1 i{
+  color: blue;
+}
+
+.bat1, .bat2 {
+  border-style: none;
+  background-color: none;
+  opacity: 1;
 }
 
 .result-h{
