@@ -17,39 +17,53 @@
 <body>
   <div class="new-game">
     <button type="button" name="button">New Game</button>
-
   </div>
+
 
   <div class="players">
     <div class="player1">
-      <h2>Player 1 <select class="" name="">
+        <h2 class="p">Player 1  </h2>
+        <select class="" name="">
           <option value="Swati">Swati</option>
           <option value="Soumya">Soumya</option>
           <option value="Papaji">Papaji</option>
-        </select> : <span class="score1"><button class="score" type="button" name="button"><i class="fas fa-table-tennis"></i></button></span>Points:<span class="point1"> 0 </span></h2>
+        </select>
+        <div class="touch">
+          <h2 class="point1"> 0 </h2>
+          <button class="score" type="button" name="button"><i class="fas fa-table-tennis"></i></button>
+
+        </div>
+
     </div>
 
 
-    <div class="">
-      <h2>Player 2 <select class="" name="">
+    <div class="player2">
+        <h2 class="p">Player 2  </h2>
+        <select style="color:red"class="" name="">
           <option value="Swati">Swati</option>
           <option value="Soumya">Soumya</option>
           <option value="Papaji">Papaji</option>
           <option value="Ankish">Ankish</option>
-        </select> : <span class="score2"><button class="score" type="button" name="button"><i class="fas fa-table-tennis"></i></button></span>Points:<span class="point2"> 0 </span></h2>
+        </select>
+        <div class="touch">
+          <h2 class="point2"> 0 </h2>
+          <button class="score" type="button" name="button"><i class="fas fa-table-tennis"></i></button>
+        </div>
+        </div>
+  </div>
 
+  <div class="hidden">
+    <div class="service">
+      <h2></h2>
     </div>
-  </div>
+    <div class="lead">
+      <h2></h2>
+    </div>
 
-  <div class="service">
-    <h2></h2>
-  </div>
-  <div class="lead">
-    <h2></h2>
-  </div>
+    <div class="result">
+      <h2 class="result-h"></h2>
+    </div>
 
-  <div class="result">
-    <h2 class="result-h"></h2>
   </div>
 
   <script src="main.js" charset="utf-8"></script>

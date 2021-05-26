@@ -72,5 +72,117 @@ i{
 .animate{
   transition-property: all;
   transition-duration: 2s;
-  transform: rotate(360deg) scale(2.5);
+  transform: rotate(360deg);
+}
+
+@media (max-width:400px) {
+  body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8fr 2fr 1fr;
+    align-items: stretch;
+
+  }
+
+  .players{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+  }
+  .player1{
+    padding: 20px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: red;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .player2{
+    padding: 20px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: blue;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hidden{
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    opacity: 0.7;
+    align-content: center;
+
+  }
+
+  .hidden h2{
+    align-self: center;
+  }
+
+  .point1, .point2{
+    font-size: 170px;
+    text-align: center;
+  }
+
+  h2.p{
+    text-align: center;
+
+  }
+
+  select{
+    color: blue;
+    border-color: blue;
+    border-style: none;
+    border-radius: 0;
+    display: inline;
+    padding: 10px 10px;
+    font-size: 26px;
+  }
+
+  option{
+    font-size: 35px;
+  }
+
+  button{
+    border-radius: 100%;
+    border-width: thick;
+    padding: 10px 20px;
+  }
+  .new-game{
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .new-game button{
+    font-size: 30px;
+    margin-bottom: 40px;
+    background-color: yellow;
+    margin-bottom: 0;
+    display: block;
+    border-radius: 0;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+  .touch{
+    padding: 50% 25% 10% 25% ;
+  }
 }

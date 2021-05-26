@@ -1,7 +1,7 @@
 let point1 = 0;
 let point2 =0;
 
-document.querySelectorAll('.score')[0].addEventListener("click", increase1);
+document.querySelectorAll('.touch')[0].addEventListener("click", increase1);
 
 function increase1(){
     point1++;
@@ -9,7 +9,7 @@ function increase1(){
     checkWinner();
 }
 
-document.querySelectorAll('.score')[1].addEventListener("click", increase2);
+document.querySelectorAll('.touch')[1].addEventListener("click", increase2);
 
 function increase2(){
     point2++;
@@ -60,7 +60,8 @@ document.querySelector('.new-game').onclick = function(){
     document.querySelector('.point2').innerHTML = '0';
     point1 = 0;
     point2 = 0;
-    document.querySelector(".result h2").innerHTML = "";
+    document.querySelector(".result-h").innerHTML = " ";
+    document.querySelector(".lead h2").innerHTML = " ";
     document.querySelectorAll('.score')[0].addEventListener("click", increase1);
     document.querySelectorAll('.score')[1].addEventListener("click", increase2);
     document.querySelector(".result h2").classList.remove("animate");
