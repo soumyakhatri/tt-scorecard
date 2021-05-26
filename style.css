@@ -121,12 +121,14 @@ i{
   .hidden{
     grid-column: 1/-1;
     grid-row: 2/3;
-    justify-content: center;
-    align-items: center;
+
     text-align: center;
     background-color: black;
     opacity: 0.7;
+    display: flex;
     align-content: center;
+    justify-content: center;
+    align-items: center;
 
   }
 
@@ -199,15 +201,16 @@ i{
   .touch{
     height: 100%;
     overflow: hidden;
-
   }
+
+
 
   .result-h{
     font-size: 50px;
   }
 
-  .bat1, .bat2{
-
+  .lead-color{
+    color:#fff5b7;
   }
 
 }

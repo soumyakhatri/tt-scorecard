@@ -65,7 +65,8 @@ document.querySelector('.new-game').onclick = function(){
     point1 = 0;
     point2 = 0;
     document.querySelector(".result-h").innerHTML = " ";
-    document.querySelector(".lead h2").innerHTML = "Soumya's TT ScoreBoard <br> Let's Start the match";
+    document.querySelector(".lead h2").innerHTML = "<h2><span>Soumya's TT ScoreBoard<span> <br> Let's Start the match</h2>";
+    document.querySelector(".lead h2 span").classList.add("lead-color");
     document.querySelectorAll('.touch')[0].addEventListener("click", increase1);
     document.querySelectorAll('.touch')[1].addEventListener("click", increase2);
     document.querySelector(".result h2").classList.remove("animate");
