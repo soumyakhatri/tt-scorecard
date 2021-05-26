@@ -9,25 +9,17 @@ let point2 =0;
 document.querySelectorAll('.touch')[0].addEventListener("click", increase1);
 
 function increase1(){
-    console.log('bat1 : ' + bat1.style.display);
-    console.log('bat2 : ' + bat2.style.display);
     point1++;
     document.querySelector('.point1').innerHTML = point1;
     checkWinner();
-
-
 }
 
 document.querySelectorAll('.touch')[1].addEventListener("click", increase2);
 
 function increase2(){
-    console.log('bat1 : ' + bat1.style.display);
-    console.log('bat2 : ' + bat2.style.display);
     point2++;
     document.querySelector('.point2').innerHTML = point2;
     checkWinner();
-
-
 }
 
 
@@ -57,6 +49,8 @@ function checkWinner(){
             result.innerHTML = "Player 2 Wins";
             stop();
             document.querySelector(".result h2").classList.add("animate");
+        } else {
+          leadplayer();
         }
     } else if (point1 > point2){
             leadplayer();
@@ -96,7 +90,7 @@ if(point1 > point2){
     lead = point2 - point1;
     document.querySelector(".lead h2").innerHTML = "Player 2 is leading by " + lead + " points"
 
-} else {
+} else if (point1 === point2){
     document.querySelector(".lead h2").innerHTML = "Score Levels";
 }
 }
